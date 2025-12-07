@@ -1,5 +1,4 @@
 // ==================== script.js – FULL & FINAL VERSION ====================
-
 const questionPad = document.getElementById('question_pad');
 const answerPad = document.getElementById('answer_pad');
 const questionAnswers = document.getElementById('question_answers');
@@ -12,11 +11,9 @@ const cancelBtn = document.getElementById('cancel_btn');
 const startScreen = document.getElementById('start_screen');
 const startBtn = document.getElementById('start_btn');
 const quitBtn = document.getElementById('quit_btn');
-
 let allQuestions = [], selectedQuestions = [], curIdx = 0, curQ = null;
 let correctCount = 0, startTime = 0, intervalId = null, isQuizActive = false;
 let isMobile = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-
 // Auto add Help Button + Mobile Class
 document.body.classList.toggle('mobile', isMobile);
 if (!document.getElementById('help_btn')) {
@@ -24,7 +21,6 @@ if (!document.getElementById('help_btn')) {
     <button id="help_btn" title="How to play">?</button>
   `);
 }
-
 // Select buttons event listeners
 const selectBtns = document.querySelectorAll('.select-btn');
 selectBtns.forEach(btn => {
@@ -34,18 +30,19 @@ selectBtns.forEach(btn => {
     btn.classList.add('active');
   });
 });
-
+// Add this new global
+let quizData = null;  // Store fetched questions here
 // Fetch questions
 fetch('questions.json')
   .then(r => r.ok ? r.json() : Promise.reject('Failed to load'))
   .then(data => {
-    showStartScreen(data); // Pass data to showStartScreen
+    quizData = data;  // Assign to global
+    showStartScreen();  // No need to pass data anymore
   })
   .catch(err => {
     questionPad.textContent = 'Error: ' + err;
     console.error(err);
   });
-
 function shuffle(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -53,8 +50,7 @@ function shuffle(array) {
   }
   return array;
 }
-
-function showStartScreen(data) {
+function showStartScreen() {
   isQuizActive = false; stopTimer(); timerDisplay.style.display = 'none';
   startScreen.style.display = 'block'; resultDiv.style.display = 'none';
   questionPad.textContent = 'You ready to code? Have fun.';
@@ -63,23 +59,19 @@ function showStartScreen(data) {
   document.querySelector('[data-type="lang"][data-value="python"]').classList.add('active');
   document.querySelector('[data-type="diff"][data-value="easy"]').classList.add('active');
 }
-
 function startQuiz() {
   const selectedLang = document.querySelector('[data-type="lang"].active')?.dataset.value || 'python';
   const selectedDiff = document.querySelector('[data-type="diff"].active')?.dataset.value || 'easy';
-  allQuestions = data[selectedLang]?.[selectedDiff] || [];
+  allQuestions = quizData?.[selectedLang]?.[selectedDiff] || [];  // Use quizData here
   if (allQuestions.length < 20) { alert('Not enough questions for this selection!'); return; }
   selectedQuestions = shuffle([...allQuestions]).slice(0, 20);
   curIdx = 0; correctCount = 0; startTime = Date.now(); isQuizActive = true;
-
   answerPad.innerHTML = ''; questionAnswers.innerHTML = '';
   resultDiv.style.display = 'none'; startScreen.style.display = 'none';
   timerDisplay.style.display = 'block';
-
   startTimer();
   loadQuestion(0);
 }
-
 function startTimer() {
   if (intervalId) clearInterval(intervalId);
   const qTime = Date.now();
@@ -88,22 +80,18 @@ function startTimer() {
     timerDisplay.textContent = `Time: ${secs}s`;
   }, 1000);
 }
-
 function stopTimer() { if (intervalId) clearInterval(intervalId); }
-
 function loadQuestion(idx) {
   if (idx >= selectedQuestions.length || !isQuizActive) { endQuiz(); return; }
   curQ = selectedQuestions[idx];
   questionPad.textContent = curQ.question;
   answerPad.innerHTML = ''; questionAnswers.innerHTML = '';
-
   // Create answer blocks
   curQ.answers.forEach((txt, i) => {
     const block = document.createElement('div');
     block.className = 'answer-block';
     block.textContent = txt;
     block.dataset.idx = i;
-
     if (isMobile) {
       block.style.cursor = 'pointer';
       block.addEventListener('click', handleTap);
@@ -114,7 +102,6 @@ function loadQuestion(idx) {
     }
     answerPad.appendChild(block);
   });
-
   // Create slots
   for (let i = 0; i < curQ.answer_divs; i++) {
     const slot = document.createElement('div');
@@ -127,25 +114,21 @@ function loadQuestion(idx) {
     }
     questionAnswers.appendChild(slot);
   }
-
   if (!isMobile) {
     answerPad.addEventListener('dragover', e => e.preventDefault());
     answerPad.addEventListener('drop', e => drop(e, true));
   }
 }
-
 // Mobile: Tap to place / remove
 function handleTap(e) {
   e.preventDefault();
   const block = e.currentTarget;
-
   // If already in a slot → return to pad
   if (block.parentElement.classList.contains('slot')) {
     answerPad.appendChild(block);
     checkIfComplete();
     return;
   }
-
   // Place in next empty slot
   const emptySlot = questionAnswers.querySelector('.slot:not(:has(.answer-block))');
   if (emptySlot) {
@@ -154,20 +137,17 @@ function handleTap(e) {
     checkIfComplete();
   }
 }
-
 function checkIfComplete() {
   if (questionAnswers.querySelectorAll('.slot .answer-block').length === curQ.answer_divs) {
     setTimeout(checkAnswerAndProceed, 500);
   }
 }
-
 // Desktop: Drag & Drop
 function dragStart(e) {
   if (isMobile) return;
   e.dataTransfer.setData('text/plain', e.target.dataset.idx);
   e.target.classList.add('dragging');
 }
-
 function drop(e, toAnswerPad = false) {
   if (isMobile || !isQuizActive) return;
   e.preventDefault();
@@ -175,26 +155,22 @@ function drop(e, toAnswerPad = false) {
   const block = document.querySelector(`.answer-block[data-idx="${idx}"]`);
   if (!block) return;
   block.classList.remove('dragging');
-
   if (toAnswerPad || !e.target.closest('.slot')) {
     answerPad.appendChild(block);
     document.querySelectorAll('.slot').forEach(s => { if (!s.hasChildNodes()) s.innerHTML = ''; });
     return;
   }
-
   const slot = e.target.closest('.slot');
   if (!slot || slot.children.length > 0) return;
   slot.innerHTML = '';
   slot.appendChild(block);
   checkIfComplete();
 }
-
 function checkAnswerAndProceed() {
   const userOrder = Array.from(questionAnswers.querySelectorAll('.slot')).map(slot => {
     const b = slot.querySelector('.answer-block');
     return b ? +b.dataset.idx : -1;
   });
-
   if (JSON.stringify(userOrder) === JSON.stringify(curQ.correct_order)) {
     correctCount++;
     curIdx++;
@@ -208,7 +184,6 @@ function checkAnswerAndProceed() {
     }, 600);
   }
 }
-
 function endQuiz() {
   if (!isQuizActive) return;
   isQuizActive = false; stopTimer();
@@ -220,7 +195,6 @@ function endQuiz() {
   questionPad.textContent = 'Quiz Complete!';
   timerDisplay.style.display = 'none';
 }
-
 // Custom Confirm + Help
 async function customConfirm(html = '') {
   return new Promise(resolve => {
@@ -237,10 +211,9 @@ async function customConfirm(html = '') {
     `;
     document.body.appendChild(overlay);
     overlay.querySelector('#yes').onclick = () => { overlay.remove(); resolve(true); };
-    overlay.querySelector('#no').onclick  = () => { overlay.remove(); resolve(false); };
+    overlay.querySelector('#no').onclick = () => { overlay.remove(); resolve(false); };
   });
 }
-
 function showHelp() {
   const msg = isMobile
     ? 'Tap any code block to place it in the next slot.<br><br>Tap a placed block to return it.'
@@ -253,7 +226,6 @@ function showHelp() {
     </p>
   `);
 }
-
 function showGoodbyeScreen() {
   document.body.innerHTML = `
     <div style="display:flex;flex-direction:column;justify-content:center;align-items:center;height:100vh;color:#14ffec;font-family:'Fira Code',monospace;background:radial-gradient(circle at 20% 20%, #0b0f19 0%, #02060f 100%);text-align:center;">
@@ -265,14 +237,12 @@ function showGoodbyeScreen() {
     </div>
   `;
 }
-
 // Events
 startBtn.onclick = startQuiz;
 retryBtn.onclick = startQuiz;
 cancelBtn.onclick = async () => { if (await customConfirm('Restart quiz?')) showStartScreen(); };
 quitBtn.onclick = async () => { if (await customConfirm('Quit the game?')) showGoodbyeScreen(); };
 document.getElementById('help_btn')?.addEventListener('click', showHelp);
-
 // Cursor glow (desktop only)
 if (!isMobile) {
   document.addEventListener('mousemove', e => {
