@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free Drag & Drop Programming Quiz – 20 Random Questions Every Game! Learn coding interactively. Worldwide access." />
+  <meta name="keywords" content="programming quiz, python quiz, javascript quiz, java quiz, drag and drop games, coding games, learn programming, time interactive quiz, coding games online, play coding game online" />
+  <meta name="author" content="Global Code Quiz" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Programming Drag & Drop Quiz – 20 New Questions Every Time!" />
+  <meta property="og:description" content="Master programming with random challenges in multiple languages. Play anywhere, anytime!" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
+  <title>Programming Drag & Drop Quiz – 20 Random Questions</title>
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Quiz",
+    "name": "Programming Drag & Drop Quiz",
+    "about": {"@type": "Thing", "name": "Programming Languages"},
+    "educationalLevel": "Beginner",
+    "inLanguage": "en",
+    "audience": {"@type": "Audience", "audienceType": "Worldwide"},
+    "publisher": {"@type": "Organization", "name": "Global Code Quiz"}
+  }
+  </script>
+  <!-- Fonts & CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <!--
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4027126264219673"
+     crossorigin="anonymous"></script> -->
+</head>
+<body>
+  <div class="container">
+    <div style="text-align:center;margin:15px 0;">
+      <button id="cancel_btn" aria-label="Cancel and restart">Cancel & Restart</button>
+    </div>
+    <div id="questions_division" class="section">
+      <div id="question_pad" role="status" aria-live="polite">Loading 20 random questions...</div>
+      <div id="timer" style="display:none;">Time: 0s</div>
+    </div>
+    <div id="question_answers_division" class="section">
+      <div id="question_answers" role="region" aria-label="Drop zone"></div>
+    </div>
+    <div id="answers_division" class="section">
+      <div id="answer_pad" role="region" aria-label="Answer pad"></div>
+    </div>
+    <div id="start_screen" class="section" style="text-align:center;">
+      <h3>Select Programming Language</h3>
+      <div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+        <button class="select-btn" data-type="lang" data-value="python">Python</button>
+        <button class="select-btn" data-type="lang" data-value="javascript">JavaScript</button>
+        <button class="select-btn" data-type="lang" data-value="java">Java</button>
+        <button class="select-btn" data-type="lang" data-value="cpp">C++</button>
+        <!-- Add more languages as needed -->
+      </div>
+      <h3>Select Difficulty Level</h3>
+      <div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+        <button class="select-btn" data-type="diff" data-value="easy">Easy</button>
+        <button class="select-btn" data-type="diff" data-value="medium">Medium</button>
+        <button class="select-btn" data-type="diff" data-value="hard">Hard</button>
+      </div>
+      <button id="start_btn">Start Quiz - 20 codes</button>
+      <button id="quit_btn">Quit</button>
+    </div>
+    <div id="result" class="section" style="display:none;text-align:center;">
+      <h2>Quiz Complete!</h2>
+      <p id="score"></p>
+      <p id="total_time"></p>
+      <button id="retry_btn">Play Again (New Set)</button>
+    </div>
+
+    <!-- Copyright Notice -->
+    <div style="text-align:center; margin: 20px 0; font-size: 0.85rem; color: #555;">
+      &copy; <span id="current_year">2025</span> <strong>Global Code Quiz</strong>. All rights reserved.
+    </div>
+    <!-- 
+    <div class="adsense-footer">
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4027126264219673"
+           crossorigin="anonymous"></script>
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-4027126264219673"
+           data-ad-slot="3180711032"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      <p style="font-size:0.7rem;color:#666;margin-top:8px;">Advertisement</p>
+    </div>
+  </div>
+  <div class="cursor-glow"></div>
+  adsense -->
+  <!-- Auto-update current year -->
+  <script>
+    document.getElementById('current_year').textContent = new Date().getFullYear();
+  </script>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
