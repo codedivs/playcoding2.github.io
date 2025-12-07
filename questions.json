@@ -213,4 +213,469 @@
       }
     ]
     }
+  ,
+   "javascript": {
+    "easy": [
+      {
+        "question": "Print 'Hello, World!' in JavaScript",
+        "answer_divs": 1,
+        "answers": ["console.log('Hello, World!')", "print('Hello')", "echo('Hello')"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Declare a variable x with value 10",
+        "answer_divs": 1,
+        "answers": ["let x = 10;", "var x == 10;", "x := 10;"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Create an array of numbers",
+        "answer_divs": 1,
+        "answers": ["let arr = [1, 2, 3];", "let arr = {1,2,3};", "arr = (1,2,3);"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Write a function that returns a + b",
+        "answer_divs": 2,
+        "answers": ["function add(a, b) {", "return a + b;", "function add(a+b);"],
+        "correct_order": [0, 1]
+      },
+      {
+        "question": "Check if number n is even",
+        "answer_divs": 2,
+        "answers": ["return n % 2 === 0;", "return n / 2 == 0;", "console.log(n);"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Access the first element of an array arr",
+        "answer_divs": 1,
+        "answers": ["arr[0]", "arr.first()", "arr.get(0)"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Concatenate two strings s1 and s2",
+        "answer_divs": 1,
+        "answers": ["s1 + s2", "s1.append(s2)", "concat(s1,s2)"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Return the length of a string s",
+        "answer_divs": 1,
+        "answers": ["s.length", "len(s)", "size(s)"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Convert string to uppercase",
+        "answer_divs": 1,
+        "answers": ["s.toUpperCase()", "s.upper()", "uppercase(s)"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Create an object person with name 'Bob'",
+        "answer_divs": 1,
+        "answers": ["let person = {name: 'Bob'};", "let person = (name: 'Bob');", "object person('Bob');"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Check if array arr contains value 5",
+        "answer_divs": 1,
+        "answers": ["arr.includes(5)", "arr.has(5)", "5 in arr"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Arrow function returning square of n",
+        "answer_divs": 2,
+        "answers": ["const square = n =>", "n * n;", "return n*n ;"],
+        "correct_order": [0, 1]
+      },
+      {
+        "question": "Loop from 0 to 4",
+        "answer_divs": 3,
+        "answers": ["for (let i = 0;", "i < 5;", "i++)"],
+        "correct_order": [0, 1, 2]
+      },
+      {
+        "question": "JSON parse a string s",
+        "answer_divs": 1,
+        "answers": ["JSON.parse(s)", "parseJSON(s)", "toJSON(s)"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Check if s starts with 'A'",
+        "answer_divs": 1,
+        "answers": ["s.startsWith('A')", "s.first() == 'A'", "s[0] is 'A'"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Create a class Car",
+        "answer_divs": 2,
+        "answers": ["class Car {", "}"],
+        "correct_order": [0, 1]
+      },
+      {
+        "question": "Return max of a and b",
+        "answer_divs": 1,
+        "answers": ["Math.max(a, b)", "max(a,b)", "maximum(a,b)"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Remove spaces from s",
+        "answer_divs": 1,
+        "answers": ["s.replace(/ /g, '')", "s.remove(' ')", "strip(s)"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Convert number n to string",
+        "answer_divs": 1,
+        "answers": ["String(n)", "n.toStr()", "toString(n)"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Sort array arr",
+        "answer_divs": 1,
+        "answers": ["arr.sort()", "sort(arr)", "arr.sorted()"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Parse int from string s",
+        "answer_divs": 1,
+        "answers": ["parseInt(s)", "int(s)", "int.parse(s)"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Check if x is NaN",
+        "answer_divs": 1,
+        "answers": ["isNaN(x)", "x == NaN", "NaN(x)"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Push value v to array arr",
+        "answer_divs": 1,
+        "answers": ["arr.push(v)", "arr.add(v)", "arr.insert(v)"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Get current date",
+        "answer_divs": 1,
+        "answers": ["new Date()", "Date()", "Date.now()"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Return absolute value of x",
+        "answer_divs": 1,
+        "answers": ["Math.abs(x)", "abs(x)", "x.absolute()"],
+        "correct_order": [0]
+      }
+    ]
+  },
+
+  "java": {
+    "easy": [
+      {
+        "question": "Print 'Hello, World!'",
+        "answer_divs": 1,
+        "answers": ["System.out.println(\"Hello, World!\");", "print(\"Hello\")", "echo(\"Hello\")"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Declare int x = 5",
+        "answer_divs": 1,
+        "answers": ["int x = 5;", "var x = 5;", "x := 5;"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Create an array of integers",
+        "answer_divs": 1,
+        "answers": ["int[] arr = {1,2,3};", "int arr = [1,2,3];", "array arr = (1,2,3);"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Method returning a + b",
+        "answer_divs": 3,
+        "answers": ["int add(int a, int b) {", "return a + b;", "}"],
+        "correct_order": [0, 1, 2]
+      },
+      {
+        "question": "Check if n is even",
+        "answer_divs": 1,
+        "answers": ["n % 2 == 0", "n / 2 == 0", "even(n)"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Access first element of arr",
+        "answer_divs": 1,
+        "answers": ["arr[0]", "arr.get(0)", "arr.first()"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Concatenate strings s1 and s2",
+        "answer_divs": 1,
+        "answers": ["s1 + s2", "s1.append(s2)", "concat(s1,s2)"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Return length of string s",
+        "answer_divs": 1,
+        "answers": ["s.length()", "len(s)", "size(s)"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Convert string to uppercase",
+        "answer_divs": 1,
+        "answers": ["s.toUpperCase()", "upper(s)", "uppercase(s)"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Create class Cat",
+        "answer_divs": 3,
+        "answers": ["class Cat {", "}", "class Cat();"],
+        "correct_order": [0, 1]
+      },
+      {
+        "question": "Return max of a and b",
+        "answer_divs": 1,
+        "answers": ["Math.max(a, b)", "max(a,b)", "maximum(a,b)"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Remove spaces from s",
+        "answer_divs": 1,
+        "answers": ["s.replace(\" \", \"\")", "s.strip()", "remove(s)"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Convert int n to string",
+        "answer_divs": 1,
+        "answers": ["String.valueOf(n)", "n.toStr()", "toString(n)"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Sort array arr",
+        "answer_divs": 1,
+        "answers": ["Arrays.sort(arr);", "sort(arr);", "arr.sort();"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Parse int from string s",
+        "answer_divs": 1,
+        "answers": ["Integer.parseInt(s)", "int(s)", "parseInt s"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Check if char c is digit",
+        "answer_divs": 1,
+        "answers": ["Character.isDigit(c)", "c.isDigit()", "digit(c)"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Return absolute value of x",
+        "answer_divs": 1,
+        "answers": ["Math.abs(x)", "abs(x)", "absolute(x)"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Loop from 0 to 4",
+        "answer_divs": 3,
+        "answers": ["for (int i = 0;", "i < 5;", "i++)"],
+        "correct_order": [0, 1, 2]
+      },
+      {
+        "question": "Create ArrayList list",
+        "answer_divs": 1,
+        "answers": ["ArrayList<Integer> list = new ArrayList<>();", "list = new ArrayList();", "new List();"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Add element to ArrayList",
+        "answer_divs": 1,
+        "answers": ["list.add(x);", "list.push(x);", "list.insert(x);"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Define constructor for Dog",
+        "answer_divs": 3,
+        "answers": ["Dog() {", "}", "init Dog()"],
+        "correct_order": [0, 1]
+      },
+      {
+        "question": "Return square of n",
+        "answer_divs": 1,
+        "answers": ["n * n", "n ** 2", "square(n)"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Check if list is empty",
+        "answer_divs": 1,
+        "answers": ["list.isEmpty()", "list.empty()", "list.size == 0"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Create String name = 'Bob'",
+        "answer_divs": 1,
+        "answers": ["String name = \"Bob\";", "string name = Bob;", "name := 'Bob'"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Return sqrt of n",
+        "answer_divs": 1,
+        "answers": ["Math.sqrt(n)", "sqrt(n)", "n.root()"],
+        "correct_order": [0]
+      }
+    ]
+  },
+
+  "cpp": {
+    "easy": [
+      {
+        "question": "Print 'Hello, World!'",
+        "answer_divs": 1,
+        "answers": ["cout << \"Hello, World!\";", "print(\"Hello\")", "echo(\"Hello\")"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Declare int x = 10",
+        "answer_divs": 1,
+        "answers": ["int x = 10;", "var x = 10;", "x := 10;"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Create array of integers",
+        "answer_divs": 1,
+        "answers": ["int arr[3] = {1,2,3};", "array arr = {1,2,3};", "int arr = [1,2,3];"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Function returning a + b",
+        "answer_divs": 3,
+        "answers": ["int add(int a, int b) {", "return a + b;", "}"],
+        "correct_order": [0, 1, 2]
+      },
+      {
+        "question": "Check if n is even",
+        "answer_divs": 1,
+        "answers": ["n % 2 == 0", "n / 2 == 0", "even(n)"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Access first element of arr",
+        "answer_divs": 1,
+        "answers": ["arr[0]", "arr.get(0)", "first(arr)"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Concatenate strings s1 and s2 (std::string)",
+        "answer_divs": 1,
+        "answers": ["s1 + s2", "append(s1,s2)", "concat(s1,s2)"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Get length of string s",
+        "answer_divs": 1,
+        "answers": ["s.length()", "len(s)", "size(s)"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Convert string to uppercase",
+        "answer_divs": 1,
+        "answers": ["toupper(s[0]); // example", "s.toUpper()", "upper(s)"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Define class Car",
+        "answer_divs": 3,
+        "answers": ["class Car {", "};", "class Car();"],
+        "correct_order": [0, 1]
+      },
+      {
+        "question": "Return max of a and b",
+        "answer_divs": 1,
+        "answers": ["max(a, b)", "Math.max(a,b)", "maximum(a,b)"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Remove spaces from string s",
+        "answer_divs": 1,
+        "answers": ["s.erase(remove(s.begin(), s.end(), ' '), s.end());", "strip(s)", "remove_spaces(s)"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Convert int to string",
+        "answer_divs": 1,
+        "answers": ["to_string(n)", "String(n)", "int.toStr()"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Sort vector v",
+        "answer_divs": 1,
+        "answers": ["sort(v.begin(), v.end());", "v.sort();", "sort(v);"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Parse int from string s",
+        "answer_divs": 1,
+        "answers": ["stoi(s)", "int(s)", "parseInt(s)"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Return absolute value of x",
+        "answer_divs": 1,
+        "answers": ["abs(x)", "Math.abs(x)", "absolute(x)"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Loop from 0 to 4",
+        "answer_divs": 3,
+        "answers": ["for (int i = 0;", "i < 5;", "i++)"],
+        "correct_order": [0, 1, 2]
+      },
+      {
+        "question": "Push value to vector v",
+        "answer_divs": 1,
+        "answers": ["v.push_back(x);", "v.add(x);", "v.insert(x);"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Define constructor in class Dog",
+        "answer_divs": 3,
+        "answers": ["Dog() {", "}", "Dog();"],
+        "correct_order": [0, 1]
+      },
+      {
+        "question": "Return square of n",
+        "answer_divs": 1,
+        "answers": ["n * n", "n ** 2", "square(n)"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Declare string name = 'Sam'",
+        "answer_divs": 1,
+        "answers": ["string name = \"Sam\";", "String name = Sam;", "name := 'Sam'"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Check if vector is empty",
+        "answer_divs": 1,
+        "answers": ["v.empty()", "v.isEmpty()", "v.size == 0"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Return sqrt of n",
+        "answer_divs": 1,
+        "answers": ["sqrt(n)", "Math.sqrt(n)", "n.root()"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Print variable x",
+        "answer_divs": 1,
+        "answers": ["cout << x;", "print(x)", "echo(x)"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Increment n by 1",
+        "answer_divs": 1,
+        "answers": ["n++;", "n += 1.0;", "n = n + 1; // invalid"],
+        "correct_order": [0]
+      }
+    ]
+  }
 }
