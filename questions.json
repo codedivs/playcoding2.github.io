@@ -210,5 +210,7 @@
         "answer_divs": 5,
         "answers": ["for", "i", "in", "range(5):", "print(i)", "while i < 5:"],
         "correct_order": [0, 1, 2, 3, 4]
-      },
-      {
+      }
+    ]
+    }
+}
