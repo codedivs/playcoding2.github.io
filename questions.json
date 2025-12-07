@@ -2,368 +2,368 @@
   "python": {
     "easy": [
       {
-        "question": "Define a function in Python that returns a + b",
-        "answer_divs": 2,
-        "answers": ["def add(a, b):", "int add(a ,b):", "return a + b;", "return a + b", "returns (a ,b)"],
-        "correct_order": [0, 3]
-      },
-      {
-        "question": "a Python function that returns the sum of squares of two numbers a and b",
-        "answer_divs": 2,
-        "answers": ["fun sum_squares(a, b):", "def squares_sum(a, b):", "return a**2 + b**2", "return (a + b)**2", "print(a**2 + b**2)"],
-        "correct_order": [1, 2]
-      },
-      {
-        "question": "Define a function that returns True if a string s contains only digits",
-        "answer_divs": 2,
-        "answers": ["def is_digit(s):", "define all_digits(s):", "return s.isdigit()", "return s.isnumeric()", "print(s.isdigit())"],
-        "correct_order": [0, 3]
-      },
-      {
-        "question": "Write a Python function that returns the second element of a list lst",
-        "answer_divs": 2,
-        "answers": ["fun second_item(lst):", "def get_second(lst):", "return lst[1]", "return lst[0]", "print(lst[1])"],
-        "correct_order": [1, 2]
-      },
-      {
-        "question": "Create a function that removes all whitespace from a string s",
-        "answer_divs": 2,
-        "answers": ["def remove_whitespace(s):", "def strip_blank_spaces(s):", "return s.replace(' ', '')", "return s.strip()", "print(s.replace(' ', ''))"],
-        "correct_order": [0, 2]
-      },
-      {
-        "question": "Write a function that returns True if a number n is a multiple of 5",
-        "answer_divs": 2,
-        "answers": ["dif multiple_of_5(n):", "def is_multiple(n):", "return n % 5 == 0", "return n / 5 == 0", "print(n % 5 == 0)"],
-        "correct_order": [1, 2]
-      },
-      {
-        "question": "Define a Python function that counts the occurrences of a value x in a list lst",
-        "answer_divs": 2,
-        "answers": ["def count_occurrences(lst, x):", "def count_x(lst, x):", "return lst.count(x)", "return len([i for i in lst if i == x])", "print(lst.count(x))"],
-        "correct_order": [0, 3]
-      },
-      {
-        "question": "Write a function that returns the sum of all even numbers in a list lst",
-        "answer_divs": 2,
-        "answers": ["def sum_no(lst):", "def even_sum(lst):", "return sum(x for x in lst if x % 2 == 0)", "return sum(lst[::2])", "print(sum(x for x in lst if x % 2 == 0))"],
-        "correct_order": [1, 2]
-      },
-      {
-        "question": "Define a function that returns True if a string s starts with a capital letter",
-        "answer_divs": 2,
-        "answers": ["def starts_cap(s):", "def is_capital(s):", "return s[0].isupper()", "return s[0].istitle()", "print(s[0].isupper())"],
-        "correct_order": [0, 3]
-      },
-      {
-        "question": "Write a Python function that concatenates two strings s1 and s2",
-        "answer_divs": 2,
-        "answers": ["def concat(s1, s2):", "def join_strings(s1, s2):", "return s1 + s2", "return s1.append(s2)", "print(s1 + s2)"],
-        "correct_order": [1, 2]
-      },
-      {
-        "question": "Define a function that returns the remainder of n divided by m",
-        "answer_divs": 2,
-        "answers": ["def remainder(n, m):", "def mod(n, m):", "return n % m", "return n / m", "print(n % m)"],
-        "correct_order": [1, 2]
-      },
-      {
-        "question": "Write a Python function that returns the square of a number n",
-        "answer_divs": 2,
-        "answers": ["def square(n):", "function square(n):", "return n * n", "return n ^ 2", "print(n ** 2)"],
-        "correct_order": [0, 2]
-      },
-      {
-        "question": "Write a function that returns the length of a string s",
-        "answer_divs": 2,
-        "answers": ["def length(s):", "function len_str(s):", "return len(s)", "print(len(s))", "return s.length()"],
-        "correct_order": [0, 2]
-      },
-      {
-        "question": "Create a Python function that converts Celsius to Fahrenheit",
-        "answer_divs": 2,
-        "answers": ["def c_to_f(c):", "def temp(c):", "return (c * 9/5) + 32", "return c * 32", "print(c + 32)"],
-        "correct_order": [0, 2]
-      },
-      {
-        "question": "Define a Python function that returns the sum of all elements in a list lst",
-        "answer_divs": 2,
-        "answers": ["def list_sum(lst):", "function list_sum(lst):", "return sum(lst)", "return lst.sum()", "print(sum(lst))"],
-        "correct_order": [0, 2]
-      },
-      {
-        "question": "Write a Python function that reverses a string",
-        "answer_divs": 2,
-        "answers": ["def reverse_str(s):", "function reverse_str(s):", "return s[::-1]", "return reverse(s)", "print(s[::-1])"],
-        "correct_order": [0, 2]
-      },
-      {
-        "question": "Define a function that returns True if a string is a palindrome",
-        "answer_divs": 2,
-        "answers": ["def is_palindrome(s):", "def not_palindrome(s):", "return s == s[::-1]", "return s = s[::-1]", "print(s == s[::-1])"],
-        "correct_order": [0, 2]
-      },
-      {
-        "question": "Write a Python function that returns the cube of a number n",
-        "answer_divs": 2,
-        "answers": ["def cube(n):", "function cube(n):", "return n ** 3", "return n * 3", "print(n ** 3)"],
-        "correct_order": [0, 2]
-      },
-      {
-        "question": "Define a Python function that returns the product of two numbers a and b",
-        "answer_divs": 2,
-        "answers": ["def multiply(a, b):", "define product(a, b):", "return a * b", "return a ** b", "print(a * b)"],
-        "correct_order": [0, 2]
-      },
-      {
-        "question": "Write a Python function that checks if a number n is even",
-        "answer_divs": 2,
-        "answers": ["def is_even(n):", "def check_even(n):", "return n % 2 == 0", "return n / 2 == 0", "print(n % 2 == 0)"],
-        "correct_order": [1, 2]
-      },
-      {
-        "question": "Create a Python function that returns the factorial of n",
-        "answer_divs": 2,
-        "answers": ["def factorial(n):", "define fact(n):", "if n == 0: return 1", "return n * factorial(n-1)", "print(factorial(n))"],
-        "correct_order": [0, 3]
-      },
-      {
-        "question": "Define a Python function that returns the maximum of two numbers a and b",
-        "answer_divs": 2,
-        "answers": ["def maximum(a, b):", "main max_num(a, b):", "return a if a > b else b", "return max(a, b)", "print(max(a, b))"],
-        "correct_order": [0, 3]
-      },
-      {
-        "question": "Write a Python function that returns the reverse of a list lst",
-        "answer_divs": 2,
-        "answers": ["void reverse_list(lst):", "def rev_list(lst):", "return lst[::-1]", "return reversed(lst)", "print(lst[::-1])"],
-        "correct_order": [1, 2]
-      },
-      {
-        "question": "Create a function that returns the square root of a number n",
-        "answer_divs": 2,
-        "answers": ["def sqrt_num(n):", "void square_root(n):", "return n ** 0.5", "return n * 0.5", "print(n ** 0.5)"],
-        "correct_order": [0, 2]
-      },
-      {
-        "question": "Write a Python function that counts the number of vowels in a string s",
-        "answer_divs": 2,
-        "answers": ["def count_vowels(s):", "def vowels(s):", "return sum(1 for ch in s if ch.lower() in 'aeiou')", "return len(s)", "print(count_vowels(s))"],
-        "correct_order": [1, 2]
-      },
-      {
-        "question": "Define a function that checks if a number is positive",
-        "answer_divs": 2,
-        "answers": ["def is_positive(n):", "def positive(n):", "return n > 0", "return n >= 0", "print(n > 0)"],
-        "correct_order": [3, 0]
-      },
-      {
-        "question": "Write a Python function that returns the largest element in a list",
-        "answer_divs": 2,
-        "answers": ["def largest(lst):", "def max_element(lst):", "return max(lst)", "return lst[-1]", "print(max(lst))"],
-        "correct_order": [2, 1]
-      },
-      {
-        "question": "Define a function that joins a list of strings into one string separated by spaces",
-        "answer_divs": 2,
-        "answers": ["def join_strings(lst):", "def combine(lst):", "return ' '.join(lst)", "return lst.join(' ')", "print(' '.join(lst))"],
-        "correct_order": [0, 2]
-      },
-      {
-        "question": "Create a function that returns the first element of a list",
-        "answer_divs": 2,
-        "answers": ["def first_item(lst):", "def first(lst):", "return lst[0]", "return lst[-1]", "print(lst[0])"],
-        "correct_order": [0, 2]
-      },
-      {
-        "question": "Define a Python function that returns the absolute value of x",
-        "answer_divs": 2,
-        "answers": ["def absolute(x):", "def abs_val(x):", "return abs(x)", "print(abs(x))", "return x.abs()"],
-        "correct_order": [0, 2]
-      },
-      {
-        "question": "Print 'Hello, World!'",
+        "question": "Print Hello World",
         "answer_divs": 1,
-        "answers": ["print('Hello, World!')", "echo 'Hello'", "console.log('Hello')", "print \"Hello\""],
+        "answers": ["print('Hello World')", "echo('Hello')", "console.log('Hello')"],
         "correct_order": [0]
       },
       {
-        "question": "Assign 42 to variable x",
+        "question": "Assign 5 to x",
         "answer_divs": 1,
-        "answers": ["x = 42", "let x = 42", "x := 42", "int x = 42"],
+        "answers": ["x = 5", "let x = 5", "int x = 5"],
         "correct_order": [0]
       },
       {
-        "question": "Add two numbers a and b",
+        "question": "Return sum of a and b",
+        "answer_divs": 2,
+        "answers": ["def add(a, b):", "return a + b", "return a - b"],
+        "correct_order": [0,1]
+      },
+      {
+        "question": "Check if n is even",
         "answer_divs": 1,
-        "answers": ["a + b", "a - b", "a * b", "a / b"],
+        "answers": ["n % 2 == 0", "n / 2 == 0", "isEven(n)"],
         "correct_order": [0]
       },
       {
-        "question": "Create a list of fruits",
+        "question": "Get first item of list lst",
         "answer_divs": 1,
-        "answers": ["fruits = ['apple', 'banana']", "fruits = {apple, banana}", "fruits = (apple, banana)", "fruits = apple banana"],
+        "answers": ["lst[0]", "lst.get(0)", "first(lst)"],
         "correct_order": [0]
       },
       {
-        "question": "Loop from 0 to 4 and print i",
+        "question": "Square n",
+        "answer_divs": 1,
+        "answers": ["n*n", "n^2", "square(n)"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Return length of s",
+        "answer_divs": 1,
+        "answers": ["len(s)", "s.length()", "size(s)"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Check if s contains digits only",
+        "answer_divs": 1,
+        "answers": ["s.isdigit()", "isdigit(s)", "s.hasDigits()"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Concatenate s1 and s2",
+        "answer_divs": 1,
+        "answers": ["s1 + s2", "concat(s1,s2)", "join(s1,s2)"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Make list of numbers 1,2,3",
+        "answer_divs": 1,
+        "answers": ["[1,2,3]", "(1,2,3)", "{1,2,3}"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Loop 0 to 4",
         "answer_divs": 5,
-        "answers": ["for", "i", "in", "range(5):", "print(i)", "while i < 5:"],
-        "correct_order": [0, 1, 2, 3, 4]
-      }
-    ]
-    }
-  ,
-   "javascript": {
-    "easy": [
+        "answers": ["for", "i", "in", "range(5):", "print(i)"],
+        "correct_order": [0,1,2,3,4]
+      },
       {
-        "question": "Print 'Hello, World!' in JavaScript",
+        "question": "Absolute value of x",
         "answer_divs": 1,
-        "answers": ["console.log('Hello, World!')", "print('Hello')", "echo('Hello')"],
+        "answers": ["abs(x)", "x.abs()", "absolute(x)"],
         "correct_order": [0]
       },
       {
-        "question": "Declare a variable x with value 10",
+        "question": "Convert s to upper",
         "answer_divs": 1,
-        "answers": ["let x = 10;", "var x == 10;", "x := 10;"],
+        "answers": ["s.upper()", "uppercase(s)", "toUpper(s)"],
         "correct_order": [0]
       },
       {
-        "question": "Create an array of numbers",
+        "question": "Check if list lst is empty",
         "answer_divs": 1,
-        "answers": ["let arr = [1, 2, 3];", "let arr = {1,2,3};", "arr = (1,2,3);"],
+        "answers": ["len(lst) == 0", "lst.empty()", "size(lst)==0"],
         "correct_order": [0]
-      },
-      {
-        "question": "Write a function that returns a + b",
-        "answer_divs": 2,
-        "answers": ["function add(a, b) {", "return a + b;", "function add(a+b);"],
-        "correct_order": [0, 1]
-      },
-      {
-        "question": "Check if number n is even",
-        "answer_divs": 2,
-        "answers": ["return n % 2 === 0;", "return n / 2 == 0;", "console.log(n);"],
-        "correct_order": [0]
-      },
-      {
-        "question": "Access the first element of an array arr",
-        "answer_divs": 1,
-        "answers": ["arr[0]", "arr.first()", "arr.get(0)"],
-        "correct_order": [0]
-      },
-      {
-        "question": "Concatenate two strings s1 and s2",
-        "answer_divs": 1,
-        "answers": ["s1 + s2", "s1.append(s2)", "concat(s1,s2)"],
-        "correct_order": [0]
-      },
-      {
-        "question": "Return the length of a string s",
-        "answer_divs": 1,
-        "answers": ["s.length", "len(s)", "size(s)"],
-        "correct_order": [0]
-      },
-      {
-        "question": "Convert string to uppercase",
-        "answer_divs": 1,
-        "answers": ["s.toUpperCase()", "s.upper()", "uppercase(s)"],
-        "correct_order": [0]
-      },
-      {
-        "question": "Create an object person with name 'Bob'",
-        "answer_divs": 1,
-        "answers": ["let person = {name: 'Bob'};", "let person = (name: 'Bob');", "object person('Bob');"],
-        "correct_order": [0]
-      },
-      {
-        "question": "Check if array arr contains value 5",
-        "answer_divs": 1,
-        "answers": ["arr.includes(5)", "arr.has(5)", "5 in arr"],
-        "correct_order": [0]
-      },
-      {
-        "question": "Arrow function returning square of n",
-        "answer_divs": 2,
-        "answers": ["const square = n =>", "n * n;", "return n*n ;"],
-        "correct_order": [0, 1]
-      },
-      {
-        "question": "Loop from 0 to 4",
-        "answer_divs": 3,
-        "answers": ["for (let i = 0;", "i < 5;", "i++)"],
-        "correct_order": [0, 1, 2]
-      },
-      {
-        "question": "JSON parse a string s",
-        "answer_divs": 1,
-        "answers": ["JSON.parse(s)", "parseJSON(s)", "toJSON(s)"],
-        "correct_order": [0]
-      },
-      {
-        "question": "Check if s starts with 'A'",
-        "answer_divs": 1,
-        "answers": ["s.startsWith('A')", "s.first() == 'A'", "s[0] is 'A'"],
-        "correct_order": [0]
-      },
-      {
-        "question": "Create a class Car",
-        "answer_divs": 2,
-        "answers": ["class Car {", "}"],
-        "correct_order": [0, 1]
       },
       {
         "question": "Return max of a and b",
         "answer_divs": 1,
-        "answers": ["Math.max(a, b)", "max(a,b)", "maximum(a,b)"],
+        "answers": ["max(a,b)", "maximum(a,b)", "maxNum(a,b)"],
         "correct_order": [0]
       },
       {
         "question": "Remove spaces from s",
         "answer_divs": 1,
-        "answers": ["s.replace(/ /g, '')", "s.remove(' ')", "strip(s)"],
+        "answers": ["s.replace(' ','')", "strip(s)", "trim(s)"],
         "correct_order": [0]
       },
       {
-        "question": "Convert number n to string",
+        "question": "Return reversed string s",
         "answer_divs": 1,
-        "answers": ["String(n)", "n.toStr()", "toString(n)"],
+        "answers": ["s[::-1]", "reverse(s)", "rev(s)"],
         "correct_order": [0]
       },
       {
-        "question": "Sort array arr",
+        "question": "Convert celsius to fahrenheit",
+        "answer_divs": 2,
+        "answers": ["def c_to_f(c):", "return (c*9/5)+32", "return c+32"],
+        "correct_order": [0,1]
+      },
+      {
+        "question": "Return product a*b",
+        "answer_divs": 1,
+        "answers": ["a*b", "multiply(a,b)", "a**b"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Check if n is positive",
+        "answer_divs": 1,
+        "answers": ["n > 0", "n >= 0", "positive(n)"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Create dict a:1",
+        "answer_divs": 1,
+        "answers": ["{'a':1}", "{a:1}", "dict(a=1)"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Get last element of list",
+        "answer_divs": 1,
+        "answers": ["lst[-1]", "lst.last()", "lst[len(lst)]"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Return min of a and b",
+        "answer_divs": 1,
+        "answers": ["min(a,b)", "minimum(a,b)", "low(a,b)"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Check if s starts with 'A'",
+        "answer_divs": 1,
+        "answers": ["s.startswith('A')", "s[0]=='A'", "start(s,'A')"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Convert n to string",
+        "answer_divs": 1,
+        "answers": ["str(n)", "String(n)", "toStr(n)"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Return sum of list lst",
+        "answer_divs": 1,
+        "answers": ["sum(lst)", "total(lst)", "add(lst)"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Create empty list",
+        "answer_divs": 1,
+        "answers": ["[]", "list()", "{}"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Return cube n^3",
+        "answer_divs": 1,
+        "answers": ["n**3", "n*3", "cube(n)"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Check if x in lst",
+        "answer_divs": 1,
+        "answers": ["x in lst", "lst.has(x)", "contains(lst,x)"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Sum even numbers in lst",
+        "answer_divs": 1,
+        "answers": ["sum(a for a in lst if a%2==0)", "sum(lst)", "sum(a for a in lst)"],
+        "correct_order": [0]
+      }
+    ]
+  },
+
+  "javascript": {
+    "easy": [
+      {
+        "question": "Print Hello",
+        "answer_divs": 1,
+        "answers": ["console.log('Hello')", "print('Hello')", "echo('Hello')"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Declare let x = 1",
+        "answer_divs": 1,
+        "answers": ["let x = 1;", "var x == 1;", "x := 1;"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Add a and b",
+        "answer_divs": 1,
+        "answers": ["a+b", "add(a,b)", "a.b"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Array of 1,2,3",
+        "answer_divs": 1,
+        "answers": ["[1,2,3]", "{1,2,3}", "(1,2,3)"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Check even n",
+        "answer_divs": 1,
+        "answers": ["n%2===0", "n/2===0", "even(n)"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Function returning a+b",
+        "answer_divs": 2,
+        "answers": ["function add(a,b){", "return a+b;}", "return a-b;"],
+        "correct_order": [0,1]
+      },
+      {
+        "question": "First element of arr",
+        "answer_divs": 1,
+        "answers": ["arr[0]", "arr.first()", "arr.get(0)"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Uppercase s",
+        "answer_divs": 1,
+        "answers": ["s.toUpperCase()", "upper(s)", "uppercase(s)"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Length of s",
+        "answer_divs": 1,
+        "answers": ["s.length", "len(s)", "size(s)"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Check arr contains 5",
+        "answer_divs": 1,
+        "answers": ["arr.includes(5)", "arr.has(5)", "5 in arr"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Square of n",
+        "answer_divs": 1,
+        "answers": ["n*n", "n^2", "square(n)"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Arrow fn square",
+        "answer_divs": 2,
+        "answers": ["const sq = n =>", "n*n;", "return n*n;"],
+        "correct_order": [0,1]
+      },
+      {
+        "question": "Parse JSON",
+        "answer_divs": 1,
+        "answers": ["JSON.parse(s)", "parseJSON(s)", "toJSON(s)"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Starts with A?",
+        "answer_divs": 1,
+        "answers": ["s.startsWith('A')", "s[0]=='A'", "s.first()=='A'"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Sort arr",
         "answer_divs": 1,
         "answers": ["arr.sort()", "sort(arr)", "arr.sorted()"],
         "correct_order": [0]
       },
       {
-        "question": "Parse int from string s",
+        "question": "Max of a,b",
         "answer_divs": 1,
-        "answers": ["parseInt(s)", "int(s)", "int.parse(s)"],
+        "answers": ["Math.max(a,b)", "max(a,b)", "maximum(a,b)"],
         "correct_order": [0]
       },
       {
-        "question": "Check if x is NaN",
+        "question": "Remove spaces",
         "answer_divs": 1,
-        "answers": ["isNaN(x)", "x == NaN", "NaN(x)"],
+        "answers": ["s.replace(/ /g,'')", "remove(s)", "strip(s)"],
         "correct_order": [0]
       },
       {
-        "question": "Push value v to array arr",
+        "question": "To string",
+        "answer_divs": 1,
+        "answers": ["String(n)", "n.toStr()", "toString(n)"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Push v to arr",
         "answer_divs": 1,
         "answers": ["arr.push(v)", "arr.add(v)", "arr.insert(v)"],
         "correct_order": [0]
       },
       {
-        "question": "Get current date",
+        "question": "Date now",
         "answer_divs": 1,
         "answers": ["new Date()", "Date()", "Date.now()"],
         "correct_order": [0]
       },
       {
-        "question": "Return absolute value of x",
+        "question": "Abs value",
         "answer_divs": 1,
         "answers": ["Math.abs(x)", "abs(x)", "x.absolute()"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Loop 0-4",
+        "answer_divs": 3,
+        "answers": ["for(let i=0;", "i<5;", "i++)"],
+        "correct_order": [0,1,2]
+      },
+      {
+        "question": "Check NaN",
+        "answer_divs": 1,
+        "answers": ["isNaN(x)", "x==NaN", "NaN(x)"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Min of a,b",
+        "answer_divs": 1,
+        "answers": ["Math.min(a,b)", "min(a,b)", "lower(a,b)"],
+        "correct_order": [0]
+      },
+      {
+        "question": "String concat",
+        "answer_divs": 1,
+        "answers": ["s1+s2", "concat(s1,s2)", "append(s1,s2)"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Empty array",
+        "answer_divs": 1,
+        "answers": ["[]", "new Array()", "{}"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Cube n",
+        "answer_divs": 1,
+        "answers": ["n**3", "n*3", "cube(n)"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Trim s",
+        "answer_divs": 1,
+        "answers": ["s.trim()", "strip(s)", "trim(s)"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Check empty arr",
+        "answer_divs": 1,
+        "answers": ["arr.length===0", "arr.empty()", "size(arr)==0"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Index of 3",
+        "answer_divs": 1,
+        "answers": ["arr.indexOf(3)", "find(arr,3)", "arr.getIndex(3)"],
         "correct_order": [0]
       }
     ]
@@ -372,81 +372,75 @@
   "java": {
     "easy": [
       {
-        "question": "Print 'Hello, World!'",
+        "question": "Print Hello",
         "answer_divs": 1,
-        "answers": ["System.out.println(\"Hello, World!\");", "print(\"Hello\")", "echo(\"Hello\")"],
+        "answers": ["System.out.println(\"Hello\");", "print(\"Hello\")", "echo(\"Hello\")"],
         "correct_order": [0]
       },
       {
-        "question": "Declare int x = 5",
+        "question": "Declare int x=1",
         "answer_divs": 1,
-        "answers": ["int x = 5;", "var x = 5;", "x := 5;"],
+        "answers": ["int x = 1;", "var x = 1;", "x := 1;"],
         "correct_order": [0]
       },
       {
-        "question": "Create an array of integers",
+        "question": "Add a+b",
         "answer_divs": 1,
-        "answers": ["int[] arr = {1,2,3};", "int arr = [1,2,3];", "array arr = (1,2,3);"],
+        "answers": ["a+b", "add(a,b)", "a.plus(b)"],
         "correct_order": [0]
       },
       {
-        "question": "Method returning a + b",
+        "question": "Array of ints",
+        "answer_divs": 1,
+        "answers": ["int[] arr={1,2,3};", "int arr=[1,2,3];", "array arr(1,2,3);"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Check even",
+        "answer_divs": 1,
+        "answers": ["n%2==0", "n/2==0", "isEven(n)"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Method returning sum",
         "answer_divs": 3,
-        "answers": ["int add(int a, int b) {", "return a + b;", "}"],
-        "correct_order": [0, 1, 2]
+        "answers": ["int add(int a,int b){", "return a+b;", "}"],
+        "correct_order": [0,1,2]
       },
       {
-        "question": "Check if n is even",
-        "answer_divs": 1,
-        "answers": ["n % 2 == 0", "n / 2 == 0", "even(n)"],
-        "correct_order": [0]
-      },
-      {
-        "question": "Access first element of arr",
+        "question": "First element arr",
         "answer_divs": 1,
         "answers": ["arr[0]", "arr.get(0)", "arr.first()"],
         "correct_order": [0]
       },
       {
-        "question": "Concatenate strings s1 and s2",
-        "answer_divs": 1,
-        "answers": ["s1 + s2", "s1.append(s2)", "concat(s1,s2)"],
-        "correct_order": [0]
-      },
-      {
-        "question": "Return length of string s",
-        "answer_divs": 1,
-        "answers": ["s.length()", "len(s)", "size(s)"],
-        "correct_order": [0]
-      },
-      {
-        "question": "Convert string to uppercase",
+        "question": "Uppercase s",
         "answer_divs": 1,
         "answers": ["s.toUpperCase()", "upper(s)", "uppercase(s)"],
         "correct_order": [0]
       },
       {
-        "question": "Create class Cat",
-        "answer_divs": 3,
-        "answers": ["class Cat {", "}", "class Cat();"],
-        "correct_order": [0, 1]
-      },
-      {
-        "question": "Return max of a and b",
+        "question": "Length of s",
         "answer_divs": 1,
-        "answers": ["Math.max(a, b)", "max(a,b)", "maximum(a,b)"],
+        "answers": ["s.length()", "len(s)", "size(s)"],
         "correct_order": [0]
       },
       {
-        "question": "Remove spaces from s",
+        "question": "Max of a,b",
         "answer_divs": 1,
-        "answers": ["s.replace(\" \", \"\")", "s.strip()", "remove(s)"],
+        "answers": ["Math.max(a,b)", "max(a,b)", "maximum(a,b)"],
         "correct_order": [0]
       },
       {
-        "question": "Convert int n to string",
+        "question": "Remove spaces",
         "answer_divs": 1,
-        "answers": ["String.valueOf(n)", "n.toStr()", "toString(n)"],
+        "answers": ["s.replace(\" \",\"\")", "trim(s)", "strip(s)"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Convert n to string",
+        "answer_divs": 1,
+        "answers": ["String.valueOf(n)", "toString(n)", "n.toStr()"],
         "correct_order": [0]
       },
       {
@@ -456,69 +450,99 @@
         "correct_order": [0]
       },
       {
-        "question": "Parse int from string s",
+        "question": "Parse int",
         "answer_divs": 1,
-        "answers": ["Integer.parseInt(s)", "int(s)", "parseInt s"],
+        "answers": ["Integer.parseInt(s)", "int(s)", "parse(s)"],
         "correct_order": [0]
       },
       {
-        "question": "Check if char c is digit",
-        "answer_divs": 1,
-        "answers": ["Character.isDigit(c)", "c.isDigit()", "digit(c)"],
-        "correct_order": [0]
-      },
-      {
-        "question": "Return absolute value of x",
+        "question": "Abs x",
         "answer_divs": 1,
         "answers": ["Math.abs(x)", "abs(x)", "absolute(x)"],
         "correct_order": [0]
       },
       {
-        "question": "Loop from 0 to 4",
-        "answer_divs": 3,
-        "answers": ["for (int i = 0;", "i < 5;", "i++)"],
-        "correct_order": [0, 1, 2]
-      },
-      {
-        "question": "Create ArrayList list",
+        "question": "Check digit",
         "answer_divs": 1,
-        "answers": ["ArrayList<Integer> list = new ArrayList<>();", "list = new ArrayList();", "new List();"],
+        "answers": ["Character.isDigit(c)", "c.isDigit()", "digit(c)"],
         "correct_order": [0]
       },
       {
-        "question": "Add element to ArrayList",
+        "question": "Empty list",
+        "answer_divs": 1,
+        "answers": ["new ArrayList<>()", "ArrayList()", "list()"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Add element list",
         "answer_divs": 1,
         "answers": ["list.add(x);", "list.push(x);", "list.insert(x);"],
         "correct_order": [0]
       },
       {
-        "question": "Define constructor for Dog",
-        "answer_divs": 3,
-        "answers": ["Dog() {", "}", "init Dog()"],
-        "correct_order": [0, 1]
-      },
-      {
-        "question": "Return square of n",
+        "question": "Min of a,b",
         "answer_divs": 1,
-        "answers": ["n * n", "n ** 2", "square(n)"],
+        "answers": ["Math.min(a,b)", "minimum(a,b)", "low(a,b)"],
         "correct_order": [0]
       },
       {
-        "question": "Check if list is empty",
+        "question": "Square n",
         "answer_divs": 1,
-        "answers": ["list.isEmpty()", "list.empty()", "list.size == 0"],
+        "answers": ["n*n", "square(n)", "n^2"],
         "correct_order": [0]
       },
       {
-        "question": "Create String name = 'Bob'",
+        "question": "Cube n",
         "answer_divs": 1,
-        "answers": ["String name = \"Bob\";", "string name = Bob;", "name := 'Bob'"],
+        "answers": ["n*n*n", "n^3", "cube(n)"],
         "correct_order": [0]
       },
       {
-        "question": "Return sqrt of n",
+        "question": "Check empty arr",
+        "answer_divs": 1,
+        "answers": ["arr.length==0", "arr.empty()", "size(arr)==0"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Return sqrt",
         "answer_divs": 1,
         "answers": ["Math.sqrt(n)", "sqrt(n)", "n.root()"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Class Cat",
+        "answer_divs": 2,
+        "answers": ["class Cat{", "}"],
+        "correct_order": [0,1]
+      },
+      {
+        "question": "Starts with A?",
+        "answer_divs": 1,
+        "answers": ["s.startsWith(\"A\")", "s.charAt(0)=='A'", "first(s)=='A'"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Concat strings",
+        "answer_divs": 1,
+        "answers": ["s1 + s2", "concat(s1,s2)", "join(s1,s2)"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Create String name",
+        "answer_divs": 1,
+        "answers": ["String name=\"Bob\";", "name='Bob';", "string name='Bob';"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Index of 3 in arr",
+        "answer_divs": 1,
+        "answers": ["Arrays.asList(arr).indexOf(3)", "index(arr,3)", "find(arr,3)"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Boolean true",
+        "answer_divs": 1,
+        "answers": ["true", "True", "TRUE"],
         "correct_order": [0]
       }
     ]
@@ -527,154 +551,178 @@
   "cpp": {
     "easy": [
       {
-        "question": "Print 'Hello, World!'",
+        "question": "Print Hello",
         "answer_divs": 1,
-        "answers": ["cout << \"Hello, World!\";", "print(\"Hello\")", "echo(\"Hello\")"],
+        "answers": ["cout << \"Hello\";", "print(\"Hello\")", "echo(\"Hello\")"],
         "correct_order": [0]
       },
       {
-        "question": "Declare int x = 10",
+        "question": "Declare int x=1",
         "answer_divs": 1,
-        "answers": ["int x = 10;", "var x = 10;", "x := 10;"],
+        "answers": ["int x=1;", "var x=1;", "x:=1;"],
         "correct_order": [0]
       },
       {
-        "question": "Create array of integers",
+        "question": "Add a+b",
         "answer_divs": 1,
-        "answers": ["int arr[3] = {1,2,3};", "array arr = {1,2,3};", "int arr = [1,2,3];"],
+        "answers": ["a+b", "add(a,b)", "sum(a,b)"],
         "correct_order": [0]
       },
       {
-        "question": "Function returning a + b",
+        "question": "Array of ints",
+        "answer_divs": 1,
+        "answers": ["int arr[3]={1,2,3};", "array arr={1,2,3};", "int arr=[1,2,3];"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Check even",
+        "answer_divs": 1,
+        "answers": ["n%2==0", "n/2==0", "even(n)"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Function returning a+b",
         "answer_divs": 3,
-        "answers": ["int add(int a, int b) {", "return a + b;", "}"],
-        "correct_order": [0, 1, 2]
+        "answers": ["int add(int a,int b){", "return a+b;", "}"],
+        "correct_order": [0,1,2]
       },
       {
-        "question": "Check if n is even",
-        "answer_divs": 1,
-        "answers": ["n % 2 == 0", "n / 2 == 0", "even(n)"],
-        "correct_order": [0]
-      },
-      {
-        "question": "Access first element of arr",
-        "answer_divs": 1,
-        "answers": ["arr[0]", "arr.get(0)", "first(arr)"],
-        "correct_order": [0]
-      },
-      {
-        "question": "Concatenate strings s1 and s2 (std::string)",
-        "answer_divs": 1,
-        "answers": ["s1 + s2", "append(s1,s2)", "concat(s1,s2)"],
-        "correct_order": [0]
-      },
-      {
-        "question": "Get length of string s",
+        "question": "Length of string s",
         "answer_divs": 1,
         "answers": ["s.length()", "len(s)", "size(s)"],
         "correct_order": [0]
       },
       {
-        "question": "Convert string to uppercase",
+        "question": "Uppercase single char",
         "answer_divs": 1,
-        "answers": ["toupper(s[0]); // example", "s.toUpper()", "upper(s)"],
+        "answers": ["toupper(s[0]);", "s.toUpper()", "upper(s)"],
         "correct_order": [0]
       },
       {
-        "question": "Define class Car",
-        "answer_divs": 3,
-        "answers": ["class Car {", "};", "class Car();"],
-        "correct_order": [0, 1]
-      },
-      {
-        "question": "Return max of a and b",
+        "question": "Max of a,b",
         "answer_divs": 1,
-        "answers": ["max(a, b)", "Math.max(a,b)", "maximum(a,b)"],
+        "answers": ["max(a,b)", "maximum(a,b)", "maxNum(a,b)"],
         "correct_order": [0]
       },
       {
-        "question": "Remove spaces from string s",
+        "question": "Remove spaces",
         "answer_divs": 1,
-        "answers": ["s.erase(remove(s.begin(), s.end(), ' '), s.end());", "strip(s)", "remove_spaces(s)"],
+        "answers": ["s.erase(remove(s.begin(),s.end(),' '),s.end());", "strip(s)", "trim(s)"],
         "correct_order": [0]
       },
       {
-        "question": "Convert int to string",
-        "answer_divs": 1,
-        "answers": ["to_string(n)", "String(n)", "int.toStr()"],
-        "correct_order": [0]
-      },
-      {
-        "question": "Sort vector v",
-        "answer_divs": 1,
-        "answers": ["sort(v.begin(), v.end());", "v.sort();", "sort(v);"],
-        "correct_order": [0]
-      },
-      {
-        "question": "Parse int from string s",
+        "question": "String to int",
         "answer_divs": 1,
         "answers": ["stoi(s)", "int(s)", "parseInt(s)"],
         "correct_order": [0]
       },
       {
-        "question": "Return absolute value of x",
+        "question": "Sort vector v",
         "answer_divs": 1,
-        "answers": ["abs(x)", "Math.abs(x)", "absolute(x)"],
+        "answers": ["sort(v.begin(),v.end());", "v.sort();", "sort(v);"],
         "correct_order": [0]
       },
       {
-        "question": "Loop from 0 to 4",
-        "answer_divs": 3,
-        "answers": ["for (int i = 0;", "i < 5;", "i++)"],
-        "correct_order": [0, 1, 2]
+        "question": "Absolute value",
+        "answer_divs": 1,
+        "answers": ["abs(x)", "absolute(x)", "Math.abs(x)"],
+        "correct_order": [0]
       },
       {
-        "question": "Push value to vector v",
+        "question": "Loop 0-4",
+        "answer_divs": 3,
+        "answers": ["for(int i=0;", "i<5;", "i++)"],
+        "correct_order": [0,1,2]
+      },
+      {
+        "question": "Push x to vector",
         "answer_divs": 1,
         "answers": ["v.push_back(x);", "v.add(x);", "v.insert(x);"],
         "correct_order": [0]
       },
       {
-        "question": "Define constructor in class Dog",
-        "answer_divs": 3,
-        "answers": ["Dog() {", "}", "Dog();"],
-        "correct_order": [0, 1]
+        "question": "Class Cat",
+        "answer_divs": 2,
+        "answers": ["class Cat{", "};"],
+        "correct_order": [0,1]
       },
       {
-        "question": "Return square of n",
+        "question": "Square n",
         "answer_divs": 1,
-        "answers": ["n * n", "n ** 2", "square(n)"],
+        "answers": ["n*n", "square(n)", "n^2"],
         "correct_order": [0]
       },
       {
-        "question": "Declare string name = 'Sam'",
+        "question": "Cube n",
         "answer_divs": 1,
-        "answers": ["string name = \"Sam\";", "String name = Sam;", "name := 'Sam'"],
+        "answers": ["n*n*n", "n^3", "cube(n)"],
         "correct_order": [0]
       },
       {
-        "question": "Check if vector is empty",
-        "answer_divs": 1,
-        "answers": ["v.empty()", "v.isEmpty()", "v.size == 0"],
-        "correct_order": [0]
-      },
-      {
-        "question": "Return sqrt of n",
+        "question": "Sqrt n",
         "answer_divs": 1,
         "answers": ["sqrt(n)", "Math.sqrt(n)", "n.root()"],
         "correct_order": [0]
       },
       {
-        "question": "Print variable x",
+        "question": "Create string s",
         "answer_divs": 1,
-        "answers": ["cout << x;", "print(x)", "echo(x)"],
+        "answers": ["string s=\"Hello\";", "String s='Hello';", "s:='Hello'"],
         "correct_order": [0]
       },
       {
-        "question": "Increment n by 1",
+        "question": "Check empty vector",
         "answer_divs": 1,
-        "answers": ["n++;", "n += 1.0;", "n = n + 1; // invalid"],
+        "answers": ["v.empty()", "v.isEmpty()", "v.size==0"],
         "correct_order": [0]
+      },
+      {
+        "question": "Min of a,b",
+        "answer_divs": 1,
+        "answers": ["min(a,b)", "minimum(a,b)", "low(a,b)"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Concat strings",
+        "answer_divs": 1,
+        "answers": ["s1 + s2", "concat(s1,s2)", "join(s1,s2)"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Index of element",
+        "answer_divs": 1,
+        "answers": ["find(v.begin(),v.end(),x)-v.begin()", "index(v,x)", "v.indexOf(x)"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Boolean true",
+        "answer_divs": 1,
+        "answers": ["true", "TRUE", "True"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Print x",
+        "answer_divs": 1,
+        "answers": ["cout << x;", "print(x);", "echo(x);"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Increment n",
+        "answer_divs": 1,
+        "answers": ["n++;", "++n;", "n+=1.5"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Return 0",
+        "answer_divs": 1,
+        "answers": ["return 0;", "return;", "return false;"],
+        "correct_order": [0]
+      },
+      {
+        "question": "Define main",
+        "answer_divs": 2,
+        "answers": ["int main(){", "}"],
+        "correct_order": [0,1]
       }
     ]
   }
