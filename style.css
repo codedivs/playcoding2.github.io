@@ -6,15 +6,14 @@
 
 html, body {
   height: 100vh;
-  height: 100dvh; /* perfect mobile support */
+  height: 100dvh;
   margin: 0;
   font-family: 'Fira Code', monospace;
   background: radial-gradient(circle at 20% 20%, #0b0f19 0%, #02060f 100%);
   color: #d4d4d4;
   touch-action: manipulation;
   -webkit-tap-highlight-color: transparent;
-  overflow: hidden; /* Prevent scrolling, fit to one screen */
-  scroll-behavior: smooth;
+  overflow: hidden;
 }
 
 body {
@@ -23,132 +22,80 @@ body {
   padding: 8px;
   gap: 8px;
   background-attachment: fixed;
-  min-height: 100vh;
-  min-height: 100dvh;
-  -webkit-overflow-scrolling: touch;
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  max-width: 900px;
+  max-width: 100vw;
   margin: 0 auto;
   width: 100%;
-  gap: 8px;
-  height: calc(100vh - 16px);
-  overflow: hidden; /* Ensure no overflow */
+  height: calc(100dvh - 16px);
+  gap: 10px;
+  overflow: hidden;
 }
 
+/* Mobile-first responsive sections */
 .section {
-  background: rgba(18,25,38,.9);
-  border-radius: 12px;
-  padding: 10px;
-  box-shadow: 0 0 20px rgba(20,255,236,.1);
-  backdrop-filter: blur(10px);
-  flex-shrink: 1; /* Allow shrinking to fit */
-  overflow: hidden; /* Prevent internal scroll unless specified */
+  background: rgba(18,25,38,.95);
+  border-radius: 16px;
+  padding: 12px;
+  box-shadow: 0 0 20px rgba(20,255,236,.15);
+  backdrop-filter: blur(12px);
+  overflow: hidden;
+  flex-shrink: 0;
 }
 
-/* Question */
+/* Question area - fixed height */
 #questions_division {
-  position: relative;
+  flex: 0 0 auto;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
+
 #question_pad {
-  font-size: clamp(0.9rem, 2.5vw, 1rem);
+  font-size: clamp(1rem, 4vw, 1.4rem);
   font-weight: 600;
   color: #14ffec;
   line-height: 1.4;
   text-align: center;
+  padding: 8px;
 }
+
 #timer {
-  font-size: .8rem;
+  font-size: 0.9rem;
   color: #8b9bb4;
   text-align: center;
-  margin-top: 4px;
+  margin-top: 6px;
 }
 
-/* Answers pool – scrollable when too many options */
-#answer_pad {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  padding: 10px;
-  background: rgba(12,18,28,.8);
-  border: 2px dashed rgba(20,255,236,.4);
-  border-radius: 10px;
-  max-height: 30vh; /* Adjusted for fit */
-  overflow-y: auto;
-  justify-content: center;
-  scrollbar-width: thin;
-  scrollbar-color: #14ffec #1e1e1e;
-}
-#answer_pad::-webkit-scrollbar {
-  width: 6px;
-}
-#answer_pad::-webkit-scrollbar-track {
-  background: #1e1e1e;
-}
-#answer_pad::-webkit-scrollbar-thumb {
-  background: #14ffec;
-  border-radius: 4px;
-}
-
-/* Drop zone – fixed min height, scroll if needed */
+/* Drop zone - grows but never scrolls */
 #question_answers {
+  flex: 1;
+  min-height: 180px;
+  max-height: 40vh;
+  background: rgba(12,18,28,.9);
+  border: 3px dashed rgba(20,255,236,.5);
+  border-radius: 16px;
+  padding: 12px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  padding: 10px;
-  background: rgba(12,18,28,.8);
-  border: 2px dashed rgba(20,255,236,.4);
-  border-radius: 10px;
-  min-height: 100px;
-  max-height: 30vh;
-  overflow-y: auto;
-  flex-shrink: 1;
+  gap: 12px;
+  overflow: hidden;
 }
 
-/* Code-block style draggable answers – smaller for building block feel */
-.answer-block {
-  padding: 10px 14px;
-  background: #1e1e1e;
-  color: #d4d4d4;
-  border: 1px solid #3e3e42;
-  border-radius: 8px;
-  cursor: grab;
-  user-select: none;
-  font-size: 0.9rem;
-  min-height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  box-shadow: inset 0 1px 3px rgba(0,0,0,.6);
-  transition: all .2s ease;
-}
-
-.answer-block:hover {
-  background: #2d2d2d;
-  border-color: #1ed760;
-  transform: translateY(-2px) scale(1.03);
-  box-shadow: 0 0 15px rgba(30,215,96,.5);
-}
-
-.answer-block:active {
-  cursor: grabbing;
-  transform: scale(0.98);
-}
-
-/* Drop slots – smaller */
 .slot {
-  min-height: 50px;
-  padding: 6px;
-  background: rgba(20,255,236,.06);
-  border: 2px dashed rgba(20,255,236,.35);
-  border-radius: 8px;
+  min-height: 64px;
+  padding: 12px;
+  background: rgba(20,255,236,.1);
+  border: 3px dashed rgba(20,255,236,.4);
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 1rem;
   transition: all .2s;
 }
 
@@ -156,25 +103,72 @@ body {
   content: attr(data-placeholder);
   color: #666;
   font-style: italic;
-  font-size: .8rem;
+  font-size: 0.9rem;
 }
 
-.slot.filled {
-  background: rgba(30,215,96,.15);
+.slot:has(.answer-block) {
+  background: rgba(30,215,96,.2);
   border-style: solid;
   border-color: #1ed760;
 }
 
-/* Buttons */
-button {
-  padding: 10px 20px;
-  margin: 6px;
-  border: none;
-  border-radius: 10px;
-  font-weight: 600;
-  cursor: pointer;
+/* Answer pad - fixed at bottom, scrollable horizontally if needed */
+#answers_division {
+  flex: 0 0 140px;
+}
+
+#answer_pad {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 12px;
+  padding: 12px 8px;
+  background: rgba(12,18,28,.9);
+  border: 3px dashed rgba(20,255,236,.5);
+  border-radius: 16px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+}
+
+#answer_pad::-webkit-scrollbar {
+  display: none;
+}
+
+.answer-block {
+  min-width: 110px;
+  flex: 0 0 auto;
+  padding: 16px 12px;
+  background: #1e1e1e;
+  color: #14ffec;
+  border: 2px solid #3e3e42;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  text-align: center;
+  user-select: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,.5);
   transition: all .2s ease;
-  box-shadow: 0 0 12px rgba(20,255,236,.4);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.answer-block:active {
+  transform: scale(0.95);
+  background: #2d2d2d;
+  border-color: #14ffec;
+  box-shadow: 0 0 20px rgba(20,255,236,.6);
+}
+
+/* Buttons - bigger for touch */
+button, .select-btn {
+  padding: 14px 20px;
+  margin: 8px 4px;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  min-height: 54px;
 }
 
 #start_btn  { background: linear-gradient(90deg, #14ffec, #0d7377); color: #0b0f19; }
@@ -182,96 +176,58 @@ button {
 #quit_btn   { background: #333; color: #ccc; }
 #retry_btn  { background: linear-gradient(90deg, #2196f3, #00bcd4); color: white; }
 
-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0,0,0,.4);
-}
-button:active {
-  transform: translateY(0);
-}
-
-/* Select buttons */
-.select-btn {
-  padding: 8px 16px;
-  background: #333;
-  color: #ccc;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all .2s;
-}
-
 .select-btn.active {
-  background: #14ffec;
-  color: #0b0f19;
+  background: #14ffec !important;
+  color: #0b0f19 !important;
+  transform: scale(1.05);
 }
 
-.select-btn:hover {
-  background: #2d2d2d;
+/* Start screen improvements */
+#start_screen h3 {
+  font-size: 1.3rem;
+  margin: 16px 0 8px;
+  color: #14ffec;
 }
 
-/* Floating Help Button */
+/* Help button */
 #help_btn {
   position: fixed;
-  inset-block-start: 12px;
-  inset-inline-end: 12px;
-  width: 48px;
-  height: 48px;
-  background: rgba(20,255,236,.2);
-  border: 2px solid #14ffec;
+  top: 12px;
+  right: 12px;
+  width: 56px;
+  height: 56px;
+  background: rgba(20,255,236,.25);
+  border: 3px solid #14ffec;
   border-radius: 50%;
   color: #14ffec;
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-weight: bold;
   z-index: 9999;
   display: grid;
   place-items: center;
-  backdrop-filter: blur(8px);
-  box-shadow: 0 0 20px rgba(20,255,236,.4);
-  transition: all .3s ease;
-}
-
-#help_btn:hover {
-  background: #14ffec;
-  color: #0b0f19;
-  transform: scale(1.15);
-  box-shadow: 0 0 30px rgba(20,255,236,.8);
-}
-
-/* Result screen */
-#result {
-  text-align: center;
-  padding: 20px;
-}
-#result h2 {
-  color: #14ffec;
-  margin-bottom: 12px;
-  font-size: clamp(1.6rem, 5vw, 1.8rem);
-}
-#result p {
-  font-size: 1.2rem;
-  margin: 10px 0;
-}
-
-/* Cursor glow – desktop only */
-@media (pointer: fine) {
-  .cursor-glow {
-    position: fixed;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(20,255,236,.28), transparent 70%);
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    transition: top .08s linear, left .08s linear;
-    z-index: 0;
-  }
 }
 
 /* Shake animation */
 @keyframes shake {
   0%,100% { transform: translateX(0); }
-  10%,30%,50%,70%,90% { transform: translateX(-6px); }
-  20%,40%,60%,80% { transform: translateX(6px); }
+  10%,30%,50%,70%,90% { transform: translateX(-8px); }
+  20%,40%,60%,80% { transform: translateX(8px); }
 }
-.shake { animation: shake .5s ease; }
+.shake { animation: shake .6s ease; }
+
+/* Hide desktop cursor glow on mobile */
+.cursor-glow {
+  display: none;
+}
+
+/* Force mobile layout */
+@media (max-width: 768px) {
+  body.mobile #answer_pad {
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+  }
+  .answer-block {
+    min-width: 120px;
+    font-size: 0.9rem;
+  }
+}
