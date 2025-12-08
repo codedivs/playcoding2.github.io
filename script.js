@@ -123,13 +123,15 @@ function loadQuestion(idx) {
 function handleTap(e) {
   e.preventDefault();
   const block = e.currentTarget;
-  // If already in a slot → return to pad
+  block.style.transform = 'scale(0.92)';
+  setTimeout(() => block.style.transform = '', 150);
+
   if (block.parentElement.classList.contains('slot')) {
     answerPad.appendChild(block);
     checkIfComplete();
     return;
   }
-  // Place in next empty slot
+
   const emptySlot = questionAnswers.querySelector('.slot:not(:has(.answer-block))');
   if (emptySlot) {
     emptySlot.innerHTML = '';
